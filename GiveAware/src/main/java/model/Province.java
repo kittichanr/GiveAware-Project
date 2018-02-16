@@ -5,8 +5,11 @@
  */
 package model;
 
+import java.sql.Connection;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import utils.ConnectionBuilder;
 
 /**
  *
@@ -25,6 +28,11 @@ public class Province {
         this.province_name = province_name;
     }
 
+    public Province(ResultSet rs) throws SQLException {
+        this.province_id = rs.getInt("province_id");
+        this.province_name = rs.getString("province_name");
+    }
+
     public int getProvince_id() {
         return province_id;
     }
@@ -41,6 +49,32 @@ public class Province {
         this.province_name = province_name;
     }
     
+     public static Province getProvinceById(int province_id) {
+        Province province = null;
+        Connection con = ConnectionBuilder.getConnection();
+
+        String sql = "select * from Province where province_id = ?";
+
+        try {
+            PreparedStatement pstm = con.prepareStatement(sql);
+            pstm.setInt(1, province_id);
+
+            ResultSet rs = pstm.executeQuery();
+            if (rs.next()) {
+                province = new Province(rs);
+            }
+
+            rs.close();
+            pstm.close();
+            con.close();
+
+        } catch (SQLException ex) {
+            System.out.println(ex);
+        }
+
+        return province;
+    }
+    
     public void orm(Province province, ResultSet rs) throws SQLException{
         province.setProvince_id(rs.getInt("province_id"));
         province.setProvince_name(rs.getString("province_name"));
@@ -51,7 +85,11 @@ public class Province {
         return "province_id: " + province_id + ", province_name: " + province_name;
     }
     
-    
+    public static void main(String[] args) {
+        Connection con = ConnectionBuilder.getConnection();
+        Province p = Province.getProvinceById(84);
+        System.out.println(p);
+    }
 
     
     
