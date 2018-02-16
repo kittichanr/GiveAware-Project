@@ -148,7 +148,7 @@
 
                     <div id="mySidenav-left" class="sidenav-left">
                         <img href="/OldHome.jsp" 
-                             src="https://i.pinimg.com/736x/8a/37/d2/8a37d23c8349779fad20350bee046b2a--unique-senior-pictures-senior-photos-in-a-field.jpg" 
+                             src="member/member picture/1.jpg" 
                              class="img-circle img-profile text-center" 
                              alt="Cinque Terre" 
                              width="40" height="40"> 
