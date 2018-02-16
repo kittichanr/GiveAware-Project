@@ -99,8 +99,17 @@
                 border-color: #FFFFFF;
             }
 
-             .jumbotron-slide {
+            .jumbotron-slide {
                 background-color: #FFFFFF;
+            }
+
+            .footer {
+                position: fixed;
+                left: 0;
+                bottom: 0;
+                width: 100%;
+                color: #000000;
+                text-align: center;
             }
 
             #main {
@@ -171,8 +180,8 @@
                 </div>
             </div>
         </nav>
-        
-         <!-- ----------------------------------------- Body ---------------------------------------------------------------- -->
+
+        <!-- ----------------------------------------- Body ---------------------------------------------------------------- -->
 
         <div class="jumbotron-slide">
             <div id="myCarousel" class="carousel slide" data-ride="carousel">
@@ -223,6 +232,11 @@
                 </a>
             </div>
         </div>
+
+        <div class="footer">
+            <p><a href="">Give Aware</a></p>
+        </div>
+
 
 
         <script>
