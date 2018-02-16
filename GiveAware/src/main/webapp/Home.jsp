@@ -1,6 +1,6 @@
 <%-- 
     Document   : Home
-    Created on : Feb 15, 2018, 10:59:15 PM
+    Created on : Feb 15, 2018, 11:59:15 PM
     Author     : Petch
 --%>
 
@@ -99,6 +99,10 @@
                 border-color: #FFFFFF;
             }
 
+             .jumbotron-slide {
+                background-color: #FFFFFF;
+            }
+
             #main {
                 transition: margin-left .5s;
                 padding: 16px;
@@ -164,11 +168,62 @@
                         <a href="#">Clients</a>
                         <a href="#">Contact</a>
                     </div>
+                </div>
+            </div>
+        </nav>
+        
+         <!-- ----------------------------------------- Body ---------------------------------------------------------------- -->
+
+        <div class="jumbotron-slide">
+            <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                <!-- Indicators -->
+                <ol class="carousel-indicators">
+                    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                    <li data-target="#myCarousel" data-slide-to="1"></li>
+                    <li data-target="#myCarousel" data-slide-to="2"></li>
+                </ol>
+
+                <!-- Wrapper for slides -->
+                <div class="carousel-inner">
+
+                    <div class="item active">
+                        <img src="https://twistedsifter.files.wordpress.com/2016/07/dulmen_bornste_waldweg.jpg" alt="Los Angeles" style="width:100%;">
+                        <div class="carousel-caption">
+                            <h3>ข่าวสาร 1</h3>
+                            <p>ข้อความข่าวสาร</p>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <img src="https://twistedsifter.files.wordpress.com/2016/07/dulmen_bornste_waldweg.jpg" alt="Chicago" style="width:100%;">
+                        <div class="carousel-caption">
+                            <h3>ข่าวสาร 2</h3>
+                            <p>ข้อความข่าวสาร</p>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <img src="https://twistedsifter.files.wordpress.com/2016/07/dulmen_bornste_waldweg.jpg" alt="New York" style="width:100%;">
+                        <div class="carousel-caption">
+                            <h3>ข่าวสาร 3 </h3>
+                            <p>ข้อความข่าวสาร</p>
+                        </div>
+                    </div>
 
                 </div>
 
+                <!-- Left and right controls -->
+                <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+                    <span class="glyphicon glyphicon-chevron-left"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="right carousel-control" href="#myCarousel" data-slide="next">
+                    <span class="glyphicon glyphicon-chevron-right"></span>
+                    <span class="sr-only">Next</span>
+                </a>
             </div>
-        </nav>
+        </div>
+
 
         <script>
             function openNav() {
