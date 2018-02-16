@@ -7,8 +7,11 @@ package model;
 
 import java.sql.Connection;
 import java.sql.Date;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import utils.ConnectionBuilder;
 
 /**
@@ -23,7 +26,6 @@ public class Member {
     private String member_address;
     private Date birthday;
     private String tel;
-    private String contact;
     private String profile_picture; 
     private int id_card_number;
     private String id_card_picture;
@@ -32,7 +34,7 @@ public class Member {
     public Member() {
     }   
 
-    public Member(int member_id, int role_id, String member_name, String member_lastname, String member_address, Date birthday, String tel, String contact, String profile_picture, int id_card_number, String id_card_picture, boolean is_approve) {
+    public Member(int member_id, int role_id, String member_name, String member_lastname, String member_address, Date birthday, String tel, String profile_picture, int id_card_number, String id_card_picture, boolean is_approve) {
         this.member_id = member_id;
         this.role_id = role_id;
         this.member_name = member_name;
@@ -40,7 +42,6 @@ public class Member {
         this.member_address = member_address;
         this.birthday = birthday;
         this.tel = tel;
-        this.contact = contact;
         this.profile_picture = profile_picture;
         this.id_card_number = id_card_number;
         this.id_card_picture = id_card_picture;
@@ -55,7 +56,6 @@ public class Member {
         this.member_address = rs.getString("member_address");
         this.birthday = rs.getDate("birthday");
         this.tel = rs.getString("tel");
-        this.contact = rs.getString("contact");
         this.profile_picture = rs.getString("profile_picture");
         this.id_card_number = rs.getInt("id_card_number");
         this.id_card_picture = rs.getString("id_card_picture");
@@ -118,14 +118,6 @@ public class Member {
         this.tel = tel;
     }
 
-    public String getContact() {
-        return contact;
-    }
-
-    public void setContact(String contact) {
-        this.contact = contact;
-    }
-
     public String getProfile_picture() {
         return profile_picture;
     }
@@ -157,7 +149,27 @@ public class Member {
     public void setIs_approve(boolean is_approve) {
         this.is_approve = is_approve;
     }
-
+    
+        public static Member getMemberById(int member_id){
+        Member member = null;
+        
+        Connection con = ConnectionBuilder.getConnection();
+        String sql = "select * from Account_Member where member_id = ?";
+        try {
+            PreparedStatement pstm = con.prepareStatement(sql);
+            pstm.setInt(1, member_id);
+            
+            ResultSet rs = pstm.executeQuery();
+            if (rs.next()) {
+                member = new Member(rs);
+            }
+        } catch (SQLException ex) {
+            Logger.getLogger(Member.class.getName()).log(Level.SEVERE, null, ex);
+        }
+       
+        return member;
+    }
+    
     @Override
     public String toString() {
         return "member_id: " + member_id + 
@@ -167,10 +179,16 @@ public class Member {
                 "\n, member_address: " + member_address + 
                 "\n, birthday: " + birthday + 
                 "\n, tel: " + tel + 
-                "\n, contact: " + contact + 
                 "\n, profile_picture: " + profile_picture + 
                 "\n, id_card_number: " + id_card_number + 
                 "\n, id_card_picture: " + id_card_picture + 
                 "\n, is_approve: " + is_approve ;
     }
+    
+    public static void main(String[] args) {
+        Connection con = ConnectionBuilder.getConnection();
+        Member member = Member.getMemberById(1);
+        System.out.println(member);
+    }
+
 }
