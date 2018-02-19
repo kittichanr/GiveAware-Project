@@ -1,6 +1,6 @@
 <%-- 
     Document   : Home
-    Created on : Feb 15, 2018, 11:59:15 PM
+    Created on : Feb 19, 2018, 10:38:15 PM
     Author     : Petch
 --%>
 
@@ -247,6 +247,64 @@
                     <span class="glyphicon glyphicon-chevron-right"></span>
                     <span class="sr-only">Next</span>
                 </a>
+            </div>
+        </div><br>
+
+        <div>
+            <div class="col-sm-12">
+                <div class="col-sm-4"></div>
+                <div class="col-sm-4">
+                    <div class="well well-sm text-center" style="background-color:grey; color: white; width:70%; margin:0 auto">ยอดบริจาคสูงสุด 4 อันดับ</div>
+                </div>
+                <div class="col-sm-4"></div>
+            </div>
+        </div><br>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-sm-3 box-shadow"  style=" margin-top: 10px;">
+
+                    <div class="col-xs-4 col-sm-12" style="height:100%; padding:0px;">
+                        <img src="https://www.cesarsway.com/sites/newcesarsway/files/styles/large_article_preview/public/Natural-Dog-Law-2-To-dogs%2C-energy-is-everything.jpg?itok=Z-ujUOUr" class=""  width="100%" height="100%">
+                    </div>
+                    <div class="col-xs-8 col-sm-12">
+                        โครงการช่วยเหลือผู้ป่วยทางจิต
+                        ยอดบริจาค 157,000 บาท
+                    </div>
+
+                </div>
+                <div class="col-xs-12 col-sm-3 box-shadow" style=" margin-top: 10px;">
+
+                    <div class="col-xs-4 col-sm-12" style="background-color:red; height:100%; padding:0;">
+                        <img src="https://www.cesarsway.com/sites/newcesarsway/files/styles/large_article_preview/public/Natural-Dog-Law-2-To-dogs%2C-energy-is-everything.jpg?itok=Z-ujUOUr" class=""  width="100%" height="100%">
+                    </div>
+                    <div class="col-xs-8 col-sm-12">
+                        โครงการช่วยเหลือผู้ป่วยทางจิต ยอดบริจาค 157,000 บาท
+                    </div>
+
+                </div>
+                <div class="col-xs-12 col-sm-3 box-shadow" style=" margin-top: 10px;">
+
+                    <div class="col-xs-4 col-sm-12" style="background-color:red; height:100%; padding:0;">
+                        <img src="https://www.cesarsway.com/sites/newcesarsway/files/styles/large_article_preview/public/Natural-Dog-Law-2-To-dogs%2C-energy-is-everything.jpg?itok=Z-ujUOUr" class=""  width="100%" height="100%">
+                    </div>
+                    <div class="col-xs-8 col-sm-12">
+                        โครงการช่วยเหลือผู้ป่วยทางจิต
+                        ยอดบริจาค 157,000 บาท
+                    </div>
+
+                </div>
+                <div class="col-xs-12 col-sm-3 box-shadow" style=" margin-top: 10px;">
+
+                    <div class="col-xs-4 col-sm-12" style="background-color:red; height:100%; padding:0;">
+                        <img src="https://www.cesarsway.com/sites/newcesarsway/files/styles/large_article_preview/public/Natural-Dog-Law-2-To-dogs%2C-energy-is-everything.jpg?itok=Z-ujUOUr" class=""  width="100%" height="100%">
+                    </div>
+                    <div class="col-xs-8 col-sm-12">
+                        โครงการช่วยเหลือผู้ป่วยทางจิต
+                        ยอดบริจาค 157,000 บาท
+                    </div>
+
+                </div>
             </div>
         </div><br>
 
