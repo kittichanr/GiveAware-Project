@@ -122,6 +122,10 @@
                 .sidenav a {font-size: 18px;}
             }
 
+            .box-shadow{
+                box-shadow: 2px 2px 5px grey;
+            }
+
         </style>
     </head>
 
@@ -141,8 +145,12 @@
                         </div>
                     </div>
 
-                    <div class="col-xs-4">
-                        <p class="navbar-text">Give Aware</p>
+                    <div class="col-xs-4 text-center" style="text-align: center; color: white;padding: 11px">
+                        <!-- <p class="navbar-text"  width="100%">Give Aware</p> -->
+                        <span>
+                            Give Aware
+
+                        </span>
                     </div>
 
                     <div class="col-xs-4" align="right">
@@ -157,7 +165,7 @@
 
                     <div id="mySidenav-left" class="sidenav-left">
                         <img href="/OldHome.jsp" 
-                             src="member/member picture/1.jpg" 
+                             src="https://i.pinimg.com/736x/8a/37/d2/8a37d23c8349779fad20350bee046b2a--unique-senior-pictures-senior-photos-in-a-field.jpg" 
                              class="img-circle img-profile text-center" 
                              alt="Cinque Terre" 
                              width="40" height="40"> 
@@ -180,13 +188,22 @@
                 </div>
             </div>
         </nav>
+        <!-- body -->
 
-        <!-- ----------------------------------------- Body ---------------------------------------------------------------- -->
+        <div>
+            <div class="col-sm-12">
+                <div class="col-sm-4"></div>
+                <div class="col-sm-4">
+                    <div class="well well-sm text-center" style="background-color:grey; color: white; width:30%; margin:0 auto">ข่าวสาร</div>
+                </div>
+                <div class="col-sm-4"></div>
+            </div>
+        </div><br>
 
         <div class="jumbotron-slide">
             <div id="myCarousel" class="carousel slide" data-ride="carousel">
                 <!-- Indicators -->
-                <ol class="carousel-indicators">
+                <ol class="carousel-indicators" >
                     <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
                     <li data-target="#myCarousel" data-slide-to="1"></li>
                     <li data-target="#myCarousel" data-slide-to="2"></li>
@@ -196,26 +213,26 @@
                 <div class="carousel-inner">
 
                     <div class="item active">
-                        <img src="https://twistedsifter.files.wordpress.com/2016/07/dulmen_bornste_waldweg.jpg" alt="Los Angeles" style="width:100%;">
+                        <img src="https://twistedsifter.files.wordpress.com/2016/07/dulmen_bornste_waldweg.jpg" alt="Los Angeles" style="width:100%; margin-top: 10px;">
                         <div class="carousel-caption">
                             <h3>ข่าวสาร 1</h3>
-                            <p>ข้อความข่าวสาร</p>
+                            <p>ข้อความข่าวสาร 1</p>
                         </div>
                     </div>
 
                     <div class="item">
-                        <img src="https://twistedsifter.files.wordpress.com/2016/07/dulmen_bornste_waldweg.jpg" alt="Chicago" style="width:100%;">
+                        <img src="https://twistedsifter.files.wordpress.com/2016/07/dulmen_bornste_waldweg.jpg" alt="Chicago" style="width:100%; margin-top: 10px;">
                         <div class="carousel-caption">
                             <h3>ข่าวสาร 2</h3>
-                            <p>ข้อความข่าวสาร</p>
+                            <p>ข้อความข่าวสาร 2</p>
                         </div>
                     </div>
 
                     <div class="item">
-                        <img src="https://twistedsifter.files.wordpress.com/2016/07/dulmen_bornste_waldweg.jpg" alt="New York" style="width:100%;">
+                        <img src="https://twistedsifter.files.wordpress.com/2016/07/dulmen_bornste_waldweg.jpg" alt="New York" style="width:100%; margin-top: 10px;">
                         <div class="carousel-caption">
                             <h3>ข่าวสาร 3 </h3>
-                            <p>ข้อความข่าวสาร</p>
+                            <p>ข้อความข่าวสาร 3</p>
                         </div>
                     </div>
 
@@ -231,13 +248,71 @@
                     <span class="sr-only">Next</span>
                 </a>
             </div>
+        </div><br>
+
+        <div>
+            <div class="col-sm-12">
+                <div class="col-sm-4"></div>
+                <div class="col-sm-4">
+                    <div class="well well-sm text-center" style="background-color:grey; color: white; width:60%; margin:0 auto">การส่งมอบเงินบริจาค</div>
+                </div>
+                <div class="col-sm-4"></div>
+            </div>
+        </div><br>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-sm-4">
+                    <a href=""><div class="well well-lg text-center" style=" width:100%; margin:0 auto; margin-top: 10px;">เดือน พฤศจิกายน พ.ศ. 2560</div></a>
+                </div>
+                <div class="col-xs-12 col-sm-4">
+                    <a href=""><div class="well well-lg text-center" style=" width:100%; margin:0 auto; margin-top: 10px;">เดือน ตุลาคม พ.ศ. 2560</div></a>
+                </div>
+                <div class="col-xs-12 col-sm-4">
+                    <a href=""><div class="well well-lg text-center" style=" width:100%; margin:0 auto; margin-top: 10px;">เดือน กันยายน พ.ศ. 2560</div></a>
+                </div>
+            </div>
+        </div><br>
+
+        <div>
+            <div class="col-sm-12">
+                <div class="col-sm-4"></div>
+                <div class="col-sm-4">
+                    <div class="well well-sm text-center" style="background-color:grey; color: white; width:50%; margin:0 auto">หมวดหมู่</div>
+                </div>
+                <div class="col-sm-4"></div>
+            </div>
+        </div><br>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-sm-3">
+                    <form action="">
+                        <button type="button" class="btn btn-default btn-lg btn-block" style="background-size: cover;background-repeat: no-repeat; background-image: url(http://www.andrasiova.cz/images/pexels-photo-259165070612.jpeg); width:100%; height: 100%; margin:0 auto; margin-bottom: 10px; margin-top: 10px;">ของบริจาค</button>
+                    </form>
+
+                </div>
+                <div class="col-xs-12 col-sm-3">
+                    <form action="">
+                        <button type="button" class="btn btn-default btn-lg btn-block" style="background-size: cover;background-repeat: no-repeat; background-image: url(https://www.cesarsway.com/sites/newcesarsway/files/styles/large_article_preview/public/Natural-Dog-Law-2-To-dogs%2C-energy-is-everything.jpg?itok=Z-ujUOUr);  width:100%; height: 100%; margin:0 auto; margin-bottom: 10px; margin-top: 10px;">ซื้อของ</button>
+                    </form>
+                </div>
+                <div class="col-xs-12 col-sm-3">
+                    <form action="">
+                        <button type="button" class="btn btn-default btn-lg btn-block" style="background-size: cover;background-repeat: no-repeat; background-image: url(https://www.cesarsway.com/sites/newcesarsway/files/styles/large_article_preview/public/Natural-Dog-Law-2-To-dogs%2C-energy-is-everything.jpg?itok=Z-ujUOUr);  width:100%; height: 100%; margin:0 auto; margin-bottom: 10px; margin-top: 10px;">บริจาคเงิน</button>
+                    </form>
+                </div>
+                <div class="col-xs-12 col-sm-3">
+                    <form action="">
+                        <button type="button" class="btn btn-default btn-lg btn-block" style="background-size: cover;background-repeat: no-repeat; background-image: url(https://www.cesarsway.com/sites/newcesarsway/files/styles/large_article_preview/public/Natural-Dog-Law-2-To-dogs%2C-energy-is-everything.jpg?itok=Z-ujUOUr);  width:100%; height: 100%; margin:0 auto; margin-bottom: 10px; margin-top: 10px;">ความต้องการ</button>
+                    </form>
+                </div>
+            </div>
+        </div><br><br>
+
+        <div class="container">
+            <p class="text-center">Give Aware</p>
         </div>
-
-        <div class="footer">
-            <p><a href="">Give Aware</a></p>
-        </div>
-
-
 
         <script>
             function openNav() {
