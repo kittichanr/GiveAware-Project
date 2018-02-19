@@ -193,7 +193,7 @@ public class DonatePost {
     public static List<DonatePost> getAllDonatePost() {
         List<DonatePost> listDonatePost = null;
         DonatePost donatePost = null;
-        String SQL = "select * from Donate_Post";
+        String SQL = "select * from Donate_Post;";
         Connection con = null;
         try {
             con = ConnectionBuilder.getConnection();
@@ -206,6 +206,9 @@ public class DonatePost {
                 }
                 listDonatePost.add(donatePost);
             }
+            rs.close();
+            ps.close();
+            con.close();
         } catch (SQLException ex) {
             Logger.getLogger(DonatePost.class.getName()).log(Level.SEVERE, null, ex);
         }
@@ -248,7 +251,7 @@ public class DonatePost {
                 + "\n, area=" + area
                 + "\n, date_create=" + date_create
                 + "\n, image_list=" + image_list_str
-                + "\n, image_amount=" + image_amount+"\n\n\n\n\n";
+                + "\n, image_amount=" + image_amount + "\n\n\n\n\n";
     }
 
     public static void main(String[] args) {
@@ -262,8 +265,8 @@ public class DonatePost {
 
         System.out.println("-----------------------------------------------------------");
         List<DonatePost> dnp = DonatePost.getAllDonatePost();
-        System.out.println("size = "+dnp.size());
-        for (int i = 0; i< dnp.size(); i++) {
+        System.out.println("size = " + dnp.size());
+        for (int i = 0; i < dnp.size(); i++) {
             System.out.println(dnp.get(i));
             System.out.println("\n________________________________________________________\n");
         }
