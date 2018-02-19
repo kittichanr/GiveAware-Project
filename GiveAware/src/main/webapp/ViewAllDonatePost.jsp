@@ -194,6 +194,35 @@
                  class="image-post" style="width: 100%; height: auto;">
         </div>
 
+        <div>
+            <h3 class="text-center" style="padding:0">เรียงลำดับตาม</h3>
+        </div>
+
+        <div class="container">
+            <div class="form-group">
+                <select class="form-control" id="sel1">
+                    <option>วันล่าสุด</option>
+                    <option>ยอดนิยม</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <div class="row">
+                    <div class="col-xs-6 col-sm-3">
+                        <button type="button" class="btn btn-default btn-block" style="margin-top: 10px;">ของบริจาค</button>
+                    </div>
+                    <div class="col-xs-6 col-sm-3">
+                        <button type="button" class="btn btn-default btn-block" style="margin-top: 10px;">ซื้องของ</button>
+                    </div>
+                    <div class="col-xs-6 col-sm-3">
+                        <button type="button" class="btn btn-default btn-block" style="margin-top: 10px;">บริจาคเงิน</button>
+                    </div>
+                    <div class="col-xs-6 col-sm-3">
+                        <button type="button" class="btn btn-default btn-block" style="margin-top: 10px;">ความต้องการ</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <div class="container">
             <p class="text-center">Give Aware</p>
         </div>
@@ -225,4 +254,3 @@
         </script>
     </body>
 </html>
-
