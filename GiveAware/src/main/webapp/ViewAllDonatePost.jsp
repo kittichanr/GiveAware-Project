@@ -1,15 +1,12 @@
 <%-- 
     Document   : ViewAllDonatePost
     Created on : Feb 17, 2018, 5:00:49 PM
-    Author     : aon_attapon
+    Author     : pek
 --%>
 
-<%@page import="java.util.ArrayList"%>
-<%@page import="model.DonatePost"%>
-<%@page import="java.util.List"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
         <title>Bootstrap Example</title>
         <meta charset="utf-8">
@@ -131,25 +128,10 @@
 
         </style>
     </head>
+
     <body>
-        <%!
-            public int nullIntconv(String str) {
-                int conv = 0;
-                if (str == null) {
-                    str = "0";
-                } else if ((str.trim()).equals("null")) {
-                    str = "0";
-                } else if (str.equals("")) {
-                    str = "0";
-                }
-                try {
-                    conv = Integer.parseInt(str);
-                } catch (Exception e) {
-                }
-                return conv;
-            }
-        %>
-        <nav class="navbar navbar-inverse" style="margin-bottom: 0;">
+
+        <nav class="navbar navbar-inverse">
             <div class="container-fluid">
                 <div class="row">
 
@@ -206,111 +188,41 @@
                 </div>
             </div>
         </nav>
-
-        <!-- ---------------------------- Body -------------------------------------->
+        
         <div class="jumbotron" style="background-color: #FFFFFF; padding-top:0; padding-bottom: 0">
             <img src="https://www.cesarsway.com/sites/newcesarsway/files/styles/large_article_preview/public/Natural-Dog-Law-2-To-dogs%2C-energy-is-everything.jpg?itok=Z-ujUOUr" 
                  class="image-post" style="width: 100%; height: auto;">
         </div>
 
-        <div>
-            <h3 class="text-center" style="padding:0">เรียงลำดับตาม</h3>
+        <div class="container">
+            <p class="text-center">Give Aware</p>
         </div>
 
-        <div class="container">
-            <div class="form-group">
-                <select class="form-control" id="sel1">
-                    <option>วันล่าสุด</option>
-                    <option>ยอดนิยม</option>
-                </select>
-            </div>
-            <div class="form-group">
-                <div class="row">
-                    <div class="col-xs-6 col-sm-3">
-                        <button type="button" class="btn btn-default btn-block" style="margin-top: 10px;">Button 2</button>
-                    </div>
-                    <div class="col-xs-6 col-sm-3">
-                        <button type="button" class="btn btn-default btn-block" style="margin-top: 10px;">Button 2</button>
-                    </div>
-                    <div class="col-xs-6 col-sm-3">
-                        <button type="button" class="btn btn-default btn-block" style="margin-top: 10px;">Button 2</button>
-                    </div>
-                    <div class="col-xs-6 col-sm-3">
-                        <button type="button" class="btn btn-default btn-block" style="margin-top: 10px;">Button 2</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <%
-            List<DonatePost> fs = DonatePost.getAllDonatePost();
-            if (fs != null) {
-                for (DonatePost f : fs) {
-                    request.setAttribute("f", f);
-        %>
-        <div class="container">
-            <div class="container">
-                <c:if test="${message!=null}">
-                    <c:out value="${message}"></c:out>
-                </c:if>
-                <div class="row">
-
-
-<!--<c:forEach items="${products}" var="p" varStatus="vs"> //JSTL TAG-->  
-                    <div class="col-xs-12 col-sm-3 box-shadow"  style=" margin-top: 10px;">
-
-                        <div class="col-xs-4 col-sm-12" style="height:100%; padding:0px;">
-                            <img src="member/member picture/1.jpg" class="image-post"  width="100%" height="100%">
-                        </div>
-
-                        <div class="col-xs-8 col-sm-12">
-                            <h4>${f.getThing_name()}</h4>
-                            <h4>${f.getArea()}</h4>
-                            <h4>${f.getProvince()}</h4>
-                            <h4>${f.getDonator_id()}</h4>
-                            <form action="">
-                                <button type="button" class="btn btn-primary btn-xs" style="margin-bottom: 10px;">กดรับบริจาค</button>
-                            </form>
-                        </div>
-                    </div>
-                    <!--</c:foreach>-->
-
-                </div>
-            </div>
-
-        </div><br>
-        <%
-                }
+        <script>
+            function openNav() {
+                document.getElementById("mySidenav").style.width = "250px";
+                document.getElementById("main").style.marginLeft = "250px";
+                document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
             }
-        %>
-    <div class="container">
-        <p class="text-center">Give Aware</p>
-    </div>
 
-    <script>
-        function openNav() {
-            document.getElementById("mySidenav").style.width = "250px";
-            document.getElementById("main").style.marginLeft = "250px";
-            document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
-        }
+            function openNavLeft() {
+                document.getElementById("mySidenav-left").style.width = "250px";
+                document.getElementById("main").style.marginLeft = "250px";
+                document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+            }
 
-        function openNavLeft() {
-            document.getElementById("mySidenav-left").style.width = "250px";
-            document.getElementById("main").style.marginLeft = "250px";
-            document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
-        }
+            function closeNavLeft() {
+                document.getElementById("mySidenav-left").style.width = "0";
+                document.getElementById("main").style.marginLeft = "0";
+                document.body.style.backgroundColor = "white";
+            }
 
-        function closeNavLeft() {
-            document.getElementById("mySidenav-left").style.width = "0";
-            document.getElementById("main").style.marginLeft = "0";
-            document.body.style.backgroundColor = "white";
-        }
-
-        function closeNav() {
-            document.getElementById("mySidenav").style.width = "0";
-            document.getElementById("main").style.marginLeft = "0";
-            document.body.style.backgroundColor = "white";
-        }
-    </script>
-</body>
+            function closeNav() {
+                document.getElementById("mySidenav").style.width = "0";
+                document.getElementById("main").style.marginLeft = "0";
+                document.body.style.backgroundColor = "white";
+            }
+        </script>
+    </body>
 </html>
+
