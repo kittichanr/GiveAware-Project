@@ -149,7 +149,6 @@
                         <!-- <p class="navbar-text"  width="100%">Give Aware</p> -->
                         <span>
                             Give Aware
-
                         </span>
                     </div>
 
@@ -221,6 +220,129 @@
                     </div>
                 </div>
             </div>
+        </div>
+
+        <div class="container">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-3 box-shadow"  style=" margin-top: 10px;">
+
+                        <div class="col-xs-4 col-sm-12" style="height:100%; padding:0px;">
+                            <img src="https://www.cesarsway.com/sites/newcesarsway/files/styles/large_article_preview/public/Natural-Dog-Law-2-To-dogs%2C-energy-is-everything.jpg?itok=Z-ujUOUr" class=""  width="100%" height="100%">
+                        </div>
+                        <div class="col-xs-8 col-sm-12">
+                            <h4>ชุดเด็กผู้หญิง 10 ตัว</h4>
+                            <h4>บริเวณ: บางประกอก</h4>
+                            <h4>จังหวัด: กรุงเทพมหานคร</h4>
+                            <h4>โดย: สมศรีอำนวย</h4>
+                            <button type="button" class="btn btn-default btn-xs">Medium</button>
+                        </div>
+
+                    </div>
+                    <div class="col-xs-12 col-sm-3 box-shadow" style=" margin-top: 10px;">
+
+                        <div class="col-xs-4 col-sm-12" style="background-color:red; height:100%; padding:0;">
+                            <img src="https://www.cesarsway.com/sites/newcesarsway/files/styles/large_article_preview/public/Natural-Dog-Law-2-To-dogs%2C-energy-is-everything.jpg?itok=Z-ujUOUr" class=""  width="100%" height="100%">
+                        </div>
+                        <div class="col-xs-8 col-sm-12">
+                            <h4>ชุดเด็กผู้หญิง 10 ตัว</h4>
+                            <h4>บริเวณ: บางประกอก</h4>
+                            <h4>จังหวัด: กรุงเทพมหานคร</h4>
+                            <h4>โดย: สมศรีอำนวย</h4>
+                            <button type="button" class="btn btn-default btn-xs">Medium</button>
+                        </div>
+
+                    </div>
+                    <div class="col-xs-12 col-sm-3 box-shadow" style=" margin-top: 10px;">
+
+                        <div class="col-xs-4 col-sm-12" style="background-color:red; height:100%; padding:0;">
+                            <img src="https://www.cesarsway.com/sites/newcesarsway/files/styles/large_article_preview/public/Natural-Dog-Law-2-To-dogs%2C-energy-is-everything.jpg?itok=Z-ujUOUr" class=""  width="100%" height="100%">
+                        </div>
+                        <div class="col-xs-8 col-sm-12">
+                            <h4>ชุดเด็กผู้หญิง 10 ตัว</h4>
+                            <h4>บริเวณ: บางประกอก</h4>
+                            <h4>จังหวัด: กรุงเทพมหานคร</h4>
+                            <h4>โดย: สมศรีอำนวย</h4>
+                            <button type="button" class="btn btn-default btn-xs">Medium</button>
+                        </div>
+
+                    </div>
+                    <div class="col-xs-12 col-sm-3 box-shadow" style=" margin-top: 10px;">
+
+                        <div class="col-xs-4 col-sm-12" style="background-color:red; height:100%; padding:0;">
+                            <img src="https://www.cesarsway.com/sites/newcesarsway/files/styles/large_article_preview/public/Natural-Dog-Law-2-To-dogs%2C-energy-is-everything.jpg?itok=Z-ujUOUr" class=""  width="100%" height="100%">
+                        </div>
+                        <div class="col-xs-8 col-sm-12">
+                            <h4>ชุดเด็กผู้หญิง 10 ตัว</h4>
+                            <h4>บริเวณ: บางประกอก</h4>
+                            <h4>จังหวัด: กรุงเทพมหานคร</h4>
+                            <h4>โดย: สมศรีอำนวย</h4>
+                            <button type="button" class="btn btn-default btn-xs">Medium</button>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-3 box-shadow"  style=" margin-top: 10px;">
+
+                        <div class="col-xs-4 col-sm-12" style="height:100%; padding:0px;">
+                            <img src="https://www.cesarsway.com/sites/newcesarsway/files/styles/large_article_preview/public/Natural-Dog-Law-2-To-dogs%2C-energy-is-everything.jpg?itok=Z-ujUOUr" class=""  width="100%" height="100%">
+                        </div>
+                        <div class="col-xs-8 col-sm-12">
+                            <h4>ชุดเด็กผู้หญิง 10 ตัว</h4>
+                            <h4>บริเวณ: บางประกอก</h4>
+                            <h4>จังหวัด: กรุงเทพมหานคร</h4>
+                            <h4>โดย: สมศรีอำนวย</h4>
+                            <button type="button" class="btn btn-default btn-xs">Medium</button>
+                        </div>
+
+                    </div>
+                    <div class="col-xs-12 col-sm-3 box-shadow" style=" margin-top: 10px;">
+
+                        <div class="col-xs-4 col-sm-12" style="background-color:red; height:100%; padding:0;">
+                            <img src="https://www.cesarsway.com/sites/newcesarsway/files/styles/large_article_preview/public/Natural-Dog-Law-2-To-dogs%2C-energy-is-everything.jpg?itok=Z-ujUOUr" class=""  width="100%" height="100%">
+                        </div>
+                        <div class="col-xs-8 col-sm-12">
+                            <h4>ชุดเด็กผู้หญิง 10 ตัว</h4>
+                            <h4>บริเวณ: บางประกอก</h4>
+                            <h4>จังหวัด: กรุงเทพมหานคร</h4>
+                            <h4>โดย: สมศรีอำนวย</h4>
+                            <button type="button" class="btn btn-default btn-xs">Medium</button>
+                        </div>
+
+                    </div>
+                    <div class="col-xs-12 col-sm-3 box-shadow" style=" margin-top: 10px;">
+
+                        <div class="col-xs-4 col-sm-12" style="background-color:red; height:100%; padding:0;">
+                            <img src="https://www.cesarsway.com/sites/newcesarsway/files/styles/large_article_preview/public/Natural-Dog-Law-2-To-dogs%2C-energy-is-everything.jpg?itok=Z-ujUOUr" class=""  width="100%" height="100%">
+                        </div>
+                        <div class="col-xs-8 col-sm-12">
+                            <h4>ชุดเด็กผู้หญิง 10 ตัว</h4>
+                            <h4>บริเวณ: บางประกอก</h4>
+                            <h4>จังหวัด: กรุงเทพมหานคร</h4>
+                            <h4>โดย: สมศรีอำนวย</h4>
+                            <button type="button" class="btn btn-default btn-xs">Medium</button>
+                        </div>
+
+                    </div>
+                    <div class="col-xs-12 col-sm-3 box-shadow" style=" margin-top: 10px;">
+
+                        <div class="col-xs-4 col-sm-12" style="background-color:red; height:100%; padding:0;">
+                            <img src="https://www.cesarsway.com/sites/newcesarsway/files/styles/large_article_preview/public/Natural-Dog-Law-2-To-dogs%2C-energy-is-everything.jpg?itok=Z-ujUOUr" class=""  width="100%" height="100%">
+                        </div>
+                        <div class="col-xs-8 col-sm-12">
+                            <h4>ชุดเด็กผู้หญิง 10 ตัว</h4>
+                            <h4>บริเวณ: บางประกอก</h4>
+                            <h4>จังหวัด: กรุงเทพมหานคร</h4>
+                            <h4>โดย: สมศรีอำนวย</h4>
+                            <button type="button" class="btn btn-default btn-xs">Medium</button>
+                        </div>
+
+                    </div>
+                </div>
+            </div><br>
         </div>
 
         <div class="container">
