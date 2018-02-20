@@ -308,36 +308,34 @@
             <input type="hidden" name="iPageNo" value="<%=iPageNo%>">
             <input type="hidden" name="cPageNo" value="<%=cPageNo%>">
             <input type="hidden" name="iShowRows" value="<%=iShowRows%>">
-            <%
-                List<DonatePost> DP = DonatePost.getAllDonatePost(iPageNo, iShowRows);
-                for (DonatePost donate : DP) {
-                    request.setAttribute("donate", donate);
-
-            %>
             <div class="container">
+                <%
+                    List<DonatePost> DP = DonatePost.getAllDonatePost(iPageNo, iShowRows);
+                    for (DonatePost donate : DP) {
+                        request.setAttribute("donate", donate);
+
+                %>
                 <div class="container">
                     <div class="row">
                         <div class="col-xs-12 col-sm-3 box-shadow"  style=" margin-top: 10px;">
-
                             <div class="col-xs-4 col-sm-12" style="height:100%; padding:0px;">
                                 <img src="https://www.cesarsway.com/sites/newcesarsway/files/styles/large_article_preview/public/Natural-Dog-Law-2-To-dogs%2C-energy-is-everything.jpg?itok=Z-ujUOUr" class=""  width="100%" height="100%">
                             </div>
                             <div class="col-xs-8 col-sm-12">
-                                <h4>${donate.thing_name}</h4>
-                                <h4>${donate.area}</h4>
-                                <h4>${donate.province.province_name}</h4>
-                                <h4>${donate.donator.member_name} ${donate.donator.member_lastname}</h4>
+                                <h5>${donate.thing_name}</h5>
+                                <h5>${donate.area}</h5>
+                                <h5>${donate.province.province_name}</h5>
+                                <h5>${donate.donator.member_name} ${donate.donator.member_lastname}</h5>
                                 <button type="button" class="btn btn-default btn-xs">Medium</button>
                             </div>
                         </div>
+                        <%            }
+
+                        %>
                     </div>
                 </div>
-            </div><br>
             </div>
         </form>
-        <%            }
-
-        %>
         <%            //// calculate next record start record  and end record 
             try {
                 if (iTotalRows < (iPageNo + iShowRows)) {
