@@ -9,6 +9,8 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import utils.ConnectionBuilder;
@@ -30,9 +32,9 @@ public class Category {
         this.category_id = category_id;
         this.category_name = category_name;
     }
-    
+
     public Category(ResultSet rs) throws SQLException {
-        this.category_id  = rs.getInt("category_id");
+        this.category_id = rs.getInt("category_id");
         this.category_name = rs.getString("category_name");
     }
 
@@ -76,7 +78,32 @@ public class Category {
         return category;
     }
 
-    public void orm(Category category, ResultSet rs) throws SQLException {
+    public static List<Category> getAllCategory() {
+        List<Category> listCategory = null;
+        Connection con = ConnectionBuilder.getConnection();
+
+        String sql = "select * from Category";
+        try {
+            PreparedStatement pstm = con.prepareStatement(sql);
+            ResultSet rs = pstm.executeQuery();
+
+            Category category = null;
+            while (rs.next()) {
+                if (listCategory == null) {
+                    listCategory = new ArrayList<>();
+                }
+                category = new Category(rs);
+                listCategory.add(category);
+            }
+
+        } catch (SQLException ex) {
+            Logger.getLogger(Category.class.getName()).log(Level.SEVERE, null, ex);
+        }
+
+        return listCategory;
+    }
+
+    public static void orm(Category category, ResultSet rs) throws SQLException {
         category.setCategory_id(rs.getInt("category_id"));
         category.setCategory_name(rs.getString("category_name"));
     }
@@ -85,10 +112,19 @@ public class Category {
     public String toString() {
         return "category_id: " + category_id + ", category_name: " + category_name;
     }
-    
+
     public static void main(String[] args) {
         Category cat = Category.getCategoryById(1);
-        System.out.println(cat);
+//        System.out.println(cat);
+
+        List<Category> listCategory = getAllCategory();
+//        for (Category category : listCategory) {
+//            System.out.println(category);
+//        }
+        System.out.println("\n----------------------------------------\n");
+        for (int i = 0; i < listCategory.size(); i++) {
+            System.out.println((i + 1) + ": " + listCategory.get(i));
+        }
     }
 
 }
