@@ -1,7 +1,7 @@
 <%-- 
     Document   : CreateDonatePost
-    Created on : Feb 20, 2018, 4:16:01 PM
-    Author     : Pek
+    Created on : Feb 20, 2018, 6:15:01 PM
+    Author     : Petch
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
@@ -87,7 +87,22 @@
                 font-size: 36px;
                 margin-left: 50px;
             }
+            .block {
+              display: block;
+              width: 120%;
+              border: none;
+              background-color: #4CAF50;
+              color: white;
+              padding: 14px 28px;
+              font-size: 16px;
+              cursor: pointer;
+              text-align: center;
+            }
 
+            .block:hover {
+              background-color: #ddd;
+              color: black;
+            }
             .hamburger-right {
                 color: #000000;
                 background-color: #000000;
@@ -193,7 +208,54 @@
         <div class="jumbotron" style="background-color: #FFFFFF; padding-top:0; padding-bottom: 0">
             <center><h1 style="width: 100%; height: auto;"> สร้างโพสต์</h1></center>
         </div>
-    
+      <div class="row">
+        <div class="col-xs-6 col-sm-6">
+          <button class="block">ขายของ</button>
+        </div>
+        <div class="col-xs-6 col-sm-6">
+          <button class="block">บริจาคสิ่งของ</button>
+        </div>
+      </div>
+        <div>
+          <center><h3><u>สร้างโพสต์บริจาคสิ่งของ</u></h3></center>
+        </div>
+        <!--หัวข้อโพสต์  -->
+        <div class="container">
+          <form>
+            <div class="form-group">
+              <h4>หัวข้อโพสต์</h4>
+              <input type="text" class="form-control" id="topicpost" >
+            </div>
+
+        <!--บริเวณ -->
+            <div class="form-group">
+              <h4>บริเวณ</h4>
+              <input type="text" class="form-control" id="area" >
+            </div>
+            <div class="form-group">
+              <h4>จังหวัด</h4>
+              <select class="form-control">
+                <option value="" selected>--------- เลือกจังหวัด ---------</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <h4>หมวดหมู่</h4>
+              <select class="form-control">
+                  <option>โปรดเลือก</option>
+                  <option>2</option>
+                  <option>3</option>
+                  <option>4</option>
+                  <option>5</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <h4>รายละเอียด</h4>
+              <textarea class="form-control" rows="3"></textarea>
+            </div>
+          </form>
+          <div class="container">
+              <p class="text-center">Give Aware</p>
+          </div>
 
 
 
@@ -224,5 +286,5 @@
 
 
 
- </body>
+</body>
 </html>
