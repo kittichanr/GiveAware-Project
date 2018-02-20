@@ -4,9 +4,17 @@
         <servlet-name>ViewAllDonatePostServlet</servlet-name>
         <servlet-class>controller.ViewAllDonatePostServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>ShowCreateDonatePostServlet</servlet-name>
+        <servlet-class>controller.ShowCreateDonatePostServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>ViewAllDonatePostServlet</servlet-name>
         <url-pattern>/ViewAllDonatePost</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ShowCreateDonatePostServlet</servlet-name>
+        <url-pattern>/ShowCreateDonatePost</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
