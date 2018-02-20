@@ -190,10 +190,10 @@ public class DonatePost {
         this.image_amount = image_amount;
     }
 
-    public static List<DonatePost> getAllDonatePost() {
+    public static List<DonatePost> getAllDonatePost(int iPageNo, int iShowRows) {
         List<DonatePost> listDonatePost = null;
         DonatePost donatePost = null;
-        String SQL = "select * from Donate_Post;";
+        String SQL = "SELECT SQL_CALC_FOUND_ROWS * FROM Donate_Post limit " + iPageNo + "," + iShowRows + "";
         Connection con = null;
         try {
             con = ConnectionBuilder.getConnection();
@@ -226,10 +226,9 @@ public class DonatePost {
         return donator;
     }
 
-    private static List<String> getImageListFromStr(String image_list_str) {
+    public static List<String> getImageListFromStr(String image_list_str) {
         List<String> image_list = new ArrayList<>();
         String[] strs = image_list_str.split(",");
-
         for (int i = 0; i < strs.length; i++) {
             image_list.add(strs[i]);
         }
@@ -255,6 +254,7 @@ public class DonatePost {
     }
 
     public static void main(String[] args) {
+
 //        String image_list_str = "a,b,c,d,e,f,g,h,i,j";
 //        List<String> list = getImageListFromStr(image_list_str);
 //        int count = 1;
@@ -262,13 +262,5 @@ public class DonatePost {
 //            System.out.println(count + ": " + string);
 //            count++;
 //        }
-
-        System.out.println("-----------------------------------------------------------");
-        List<DonatePost> dnp = DonatePost.getAllDonatePost();
-        System.out.println("size = " + dnp.size());
-        for (int i = 0; i < dnp.size(); i++) {
-            System.out.println(dnp.get(i));
-            System.out.println("\n________________________________________________________\n");
-        }
     }
 }
