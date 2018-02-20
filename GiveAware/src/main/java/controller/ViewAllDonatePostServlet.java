@@ -7,6 +7,7 @@ package controller;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.ArrayList;
 import java.util.List;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -32,10 +33,10 @@ public class ViewAllDonatePostServlet extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
-
-        String target = "/ViewAllDonatePost.jsp";
-        List<DonatePost> listDonatePost = DonatePost.getAllDonatePost();
         
+        String target = "/ViewAllDonatePost.jsp";
+        List<DonatePost> listDonatePost = DonatePost.getAllDonatePost(0, 10);
+
         request.setAttribute("listDonatePost", listDonatePost);
         getServletContext().getRequestDispatcher(target).forward(request, response);
     }
