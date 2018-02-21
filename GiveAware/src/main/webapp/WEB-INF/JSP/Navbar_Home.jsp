@@ -12,21 +12,21 @@
         <title>JSP Page</title>
     </head>
     <body>
-        <nav class="navbar navbar-inverse">
+        <nav class="navbar navbar-inverse" style="height: 60px;">
             <div class="container-fluid">
                 <div class="row">
 
                     <div class="col-xs-4">
-                        <div class="navbar-header" >
+                        <div class="navbar-header" style="width: 50px;height: 50px;">
                             <img onclick="openNavLeft()" 
                                  src="https://i.pinimg.com/736x/8a/37/d2/8a37d23c8349779fad20350bee046b2a--unique-senior-pictures-senior-photos-in-a-field.jpg" 
                                  class="img-circle img-profile" 
                                  alt="Cinque Terre" 
-                                 width="40" height="40"> 
+                                 width="100%" height="100%"> 
                         </div>
                     </div>
 
-                    <div class="col-xs-4 text-center" style="text-align: center; color: white;padding: 11px">
+                    <div class="col-xs-4 text-center" style="text-align: center; color: white;padding: 11px;padding-top: 20px;">
                         <!-- <p class="navbar-text"  width="100%">Give Aware</p> -->
                         <span>
                             Give Aware
@@ -34,7 +34,7 @@
                         </span>
                     </div>
 
-                    <div class="col-xs-4" align="right">
+                    <div class="col-xs-4" align="right" style="padding-top: 10px">
                         <div>
                             <span class="img-profile hamburgur-right" style="font-size:30px;cursor:pointer; color: #fff" onclick="openNav()" >&#9776;
                             </span>
