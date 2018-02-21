@@ -10,6 +10,7 @@ import java.sql.Date;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Level;
@@ -193,7 +194,9 @@ public class DonatePost {
     public static List<DonatePost> getAllDonatePost(int iPageNo, int iShowRows) {
         List<DonatePost> listDonatePost = null;
         DonatePost donatePost = null;
-        String SQL = "SELECT SQL_CALC_FOUND_ROWS * FROM Donate_Post limit " + iPageNo + "," + iShowRows + "";
+        String SQL = "SELECT SQL_CALC_FOUND_ROWS * FROM Donate_Post "
+                     + " ORDER BY donate_post_id DESC "
+                     + "limit " + iPageNo + "," + iShowRows; 
         Connection con = null;
         try {
             con = ConnectionBuilder.getConnection();
@@ -213,6 +216,58 @@ public class DonatePost {
             Logger.getLogger(DonatePost.class.getName()).log(Level.SEVERE, null, ex);
         }
         return listDonatePost;
+    }
+
+    public static boolean createDonatePost(DonatePost donatePost, Object donator) {
+        int x = 0;
+        Connection con = ConnectionBuilder.getConnection();
+        String sql = "insert into Donate_Post (role_id, donator_id, status_id, thing_name"
+                + ", post_detail, category_id, province_id, area, date_create"
+                + ", image_list, image_amount) "
+                + " VALUES (?,?,?,?,?,?,?,?,?,?,?)";
+        try {
+            PreparedStatement pstm = con.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
+            
+            Member donatorMem;
+            if (donator instanceof Member) {
+                donatorMem = (Member) donator;
+                pstm.setInt(1,donatorMem.getRole_id());
+                pstm.setInt(2, donatorMem.getMember_id());
+            }
+            
+//        Foundation donatorFound;
+//        if(donator interface Foundation){
+//            donatorFound = (Foundation) donator;
+//            pstm.setInt(1,donatorFound.getRole_id());
+//            pstm.setInt(2, donatorFound.getFoundation_id());
+//        }
+            
+            pstm.setInt(3, 1);
+            pstm.setString(4, donatePost.getThing_name());
+            pstm.setString(5, donatePost.getPost_detail());
+            pstm.setInt(6, donatePost.getCategory().getCategory_id());
+            pstm.setInt(7, donatePost.getProvince().getProvince_id());
+            pstm.setString(8, donatePost.getArea());
+            pstm.setDate(9, new java.sql.Date(new java.util.Date().getTime()));
+            pstm.setString(10, donatePost.getImage_list_str());
+            pstm.setInt(11, donatePost.getImage_amount());
+            
+            x = pstm.executeUpdate();
+            ResultSet rs = pstm.getGeneratedKeys();
+
+            rs.next();
+            int donatePostId = rs.getInt(1);
+            donatePost.setDonate_post_id(donatePostId);
+            
+            rs.close();
+            pstm.close();
+            con.close();
+            
+        } catch (SQLException ex) {
+            Logger.getLogger(DonatePost.class.getName()).log(Level.SEVERE, null, ex);
+        }
+
+        return x > 0;
     }
 
     private Object getDonator(int donator_role_id, int donator_id) {
@@ -262,5 +317,18 @@ public class DonatePost {
 //            System.out.println(count + ": " + string);
 //            count++;
 //        }
+        Member mem = Member.getMemberById(1);
+        DonatePost dnn = new DonatePost();
+        dnn.setThing_name("test");
+        dnn.setPost_detail("test");
+        dnn.setArea("test");
+        dnn.setCategory(Category.getCategoryById(1));
+        dnn.setProvince(Province.getProvinceById(1));
+        dnn.setDonator(mem);
+        dnn.setImage_list_str("a,b,c,d");
+        dnn.setImage_amount(1);
+        boolean success = DonatePost.createDonatePost(dnn, mem);
+        System.out.println(success);
+        System.out.println("dnn: "+dnn);
     }
 }
