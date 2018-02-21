@@ -50,7 +50,7 @@
             .sidenav a {
                 padding: 8px 8px 8px 32px;
                 text-decoration: none;
-                font-size: 25px;
+                font-size: 18px;
                 color: #818181;
                 display: block;
                 transition: 0.3s;
@@ -289,25 +289,25 @@
         <div class="container">
             <div class="row">
                 <div class="col-xs-12 col-sm-3">
-                    <form action="">
+                    <a href="ViewAllDonatePost">
                         <button type="button" class="btn btn-default btn-lg btn-block" style="background-size: cover;background-repeat: no-repeat; background-image: url(http://www.andrasiova.cz/images/pexels-photo-259165070612.jpeg); width:100%; height: 100%; margin:0 auto; margin-bottom: 10px; margin-top: 10px;">ของบริจาค</button>
-                    </form>
+                    </a>
 
                 </div>
                 <div class="col-xs-12 col-sm-3">
-                    <form action="">
+                    <a href="">
                         <button type="button" class="btn btn-default btn-lg btn-block" style="background-size: cover;background-repeat: no-repeat; background-image: url(https://www.cesarsway.com/sites/newcesarsway/files/styles/large_article_preview/public/Natural-Dog-Law-2-To-dogs%2C-energy-is-everything.jpg?itok=Z-ujUOUr);  width:100%; height: 100%; margin:0 auto; margin-bottom: 10px; margin-top: 10px;">ซื้อของ</button>
-                    </form>
+                    </a>
                 </div>
                 <div class="col-xs-12 col-sm-3">
-                    <form action="">
+                    <a href="">
                         <button type="button" class="btn btn-default btn-lg btn-block" style="background-size: cover;background-repeat: no-repeat; background-image: url(https://www.cesarsway.com/sites/newcesarsway/files/styles/large_article_preview/public/Natural-Dog-Law-2-To-dogs%2C-energy-is-everything.jpg?itok=Z-ujUOUr);  width:100%; height: 100%; margin:0 auto; margin-bottom: 10px; margin-top: 10px;">บริจาคเงิน</button>
-                    </form>
+                    </a>
                 </div>
                 <div class="col-xs-12 col-sm-3">
-                    <form action="">
+                    <a href="">
                         <button type="button" class="btn btn-default btn-lg btn-block" style="background-size: cover;background-repeat: no-repeat; background-image: url(https://www.cesarsway.com/sites/newcesarsway/files/styles/large_article_preview/public/Natural-Dog-Law-2-To-dogs%2C-energy-is-everything.jpg?itok=Z-ujUOUr);  width:100%; height: 100%; margin:0 auto; margin-bottom: 10px; margin-top: 10px;">ความต้องการ</button>
-                    </form>
+                    </a>
                 </div>
             </div>
         </div><br><br>

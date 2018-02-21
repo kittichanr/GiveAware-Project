@@ -61,10 +61,14 @@
 
                     <div id="mySidenav" class="sidenav">
                         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-                        <a href="#">About</a>
-                        <a href="#">Services</a>
-                        <a href="#">Clients</a>
-                        <a href="#">Contact</a>
+                        <a href="ShowCreateDonatePost">สร้างโพสต์</a>
+                        <a href="#">การแจ้งเตือน</a>
+                        <a href="#">โพสต์ที่เก็บไว้</a>
+                        <a href="#">ประวัติการขายของ</a>
+                        <a href="#">ประวัติการซื้อของ</a>
+                        <a href="#">ประวัติการรับของ</a>
+                        <a href="#">ประวัติการบริจาคสิ่งของ</a>
+                        <a href="#">ประวัติการบริจาคเงิน</a>
                     </div>
                 </div>
             </div>
