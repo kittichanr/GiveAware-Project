@@ -214,6 +214,11 @@
             .container {
                 padding-top: 50px;
             }
+            .modal-content{
+                padding: 20px;
+                text-align: center;
+                font-size: 24px;
+            }
 
         </style>
     </head>
@@ -242,70 +247,91 @@
         <!--หัวข้อโพสต์  -->
         <form action="CreateNewDonatePost">
             <div class="container">
-        <div class="form-group">
-            <h4>หัวข้อโพสต์</h4>
-            <input type="text" class="form-control" id="topicpost" name="topic">
-        </div>
-
-        <!--บริเวณ -->
-        <div class="form-group">
-            <h4>บริเวณ</h4>
-            <input type="text" class="form-control" id="area" name="area">
-        </div>
-        <div class="form-group">
-            <h4>จังหวัด</h4>
-            <select class="form-control">
-                <%
-                    List<Province> pv = Province.getAllProvince();
-                    for (Province p : pv) {
-                        request.setAttribute("p", p);
-                %>
-                <option value="${p.province_id}" name="province">${p.province_name}</option>
-                <%}%>
-            </select>
-        </div>
-        <div class="form-group">
-            <h4>หมวดหมู่</h4>
-            <select class="form-control">
-                <%
-                    List<Category> cg = Category.getAllCategory();
-                    for (Category c : cg) {
-                        request.setAttribute("c", c);
-                %>
-                <option value="${c.category_id}" name="category">${c.category_name}</option>
-                <%}%>
-            </select>
-        </div>
-        <div class="form-group">
-            <h4>รายละเอียด</h4>
-            <textarea class="form-control" rows="3" name="detail"></textarea>
-        </div>
-        <div class="form-group">
-            <h4>รูปภาพ</h4>
-            <h6 style="color:red">*รูปที่คุณเลือกอันดับแรกจะเป็นหน้าปกโพสต์ของคุณ</h6>
-
-            <div class="container">
-                <fieldset class="form-group">
-                    <a href="javascript:void(0)" onclick="$('#pro-image').click()" class="glyphicon glyphicon-picture"></a>
-                    <input type="file" id="pro-image" name="image" style="display: none;" class="form-control" multiple>
-                </fieldset>
-                <div class="preview-images-zone">
-                    <!-- <div class="preview-image preview-show-1">
-                        <div class="image-cancel" data-no="1">x</div>
-                        <div class="image-zone"><img id="pro-img-1" src="https://scontent.fbkk1-5.fna.fbcdn.net/v/t1.0-1/p240x240/19959271_1422340951164915_5064915005517635211_n.jpg?oh=d00714227f317f04f4733895087fca15&oe=5ACE9FFD"></div>
-                        <div class="tools-edit-image"><a href="javascript:void(0)" data-no="1" class="btn btn-light btn-edit-image">edit</a></div>
-                    </div> -->
+                <div class="form-group">
+                    <h4>หัวข้อโพสต์</h4>
+                    <input type="text" class="form-control" id="topicpost" name="topic">
                 </div>
-            </div>
-            <div>
-                <div class="container">
-                    <center><button type="button" class="btn btn-primary">สร้างโพสต์</button></center>
-                </div>
-            </div>
 
-        </div>
+                <!--บริเวณ -->
+                <div class="form-group">
+                    <h4>บริเวณ</h4>
+                    <input type="text" class="form-control" id="area" name="area">
+                </div>
+                <div class="form-group">
+                    <h4>จังหวัด</h4>
+                    <select class="form-control">
+                        <%
+                            List<Province> pv = Province.getAllProvince();
+                            for (Province p : pv) {
+                                request.setAttribute("p", p);
+                        %>
+                        <option value="${p.province_id}" name="province">${p.province_name}</option>
+                        <%}%>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <h4>หมวดหมู่</h4>
+                    <select class="form-control">
+                        <%
+                            List<Category> cg = Category.getAllCategory();
+                            for (Category c : cg) {
+                                request.setAttribute("c", c);
+                        %>
+                        <option value="${c.category_id}" name="category">${c.category_name}</option>
+                        <%}%>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <h4>รายละเอียด</h4>
+                    <textarea class="form-control" rows="3" name="detail"></textarea>
+                </div>
+                <div class="form-group">
+                    <h4>รูปภาพ</h4>
+                    <h6 style="color:red">*รูปที่คุณเลือกอันดับแรกจะเป็นหน้าปกโพสต์ของคุณ</h6>
+
+                    <div class="container">
+                        <fieldset class="form-group">
+                            <a href="javascript:void(0)" onclick="$('#pro-image').click()" class="glyphicon glyphicon-picture"></a>
+                            <input type="file" id="pro-image" name="image" style="display: none;" class="form-control" multiple>
+                        </fieldset>
+                        <div class="preview-images-zone">
+                            <!-- <div class="preview-image preview-show-1">
+                                <div class="image-cancel" data-no="1">x</div>
+                                <div class="image-zone"><img id="pro-img-1" src="https://scontent.fbkk1-5.fna.fbcdn.net/v/t1.0-1/p240x240/19959271_1422340951164915_5064915005517635211_n.jpg?oh=d00714227f317f04f4733895087fca15&oe=5ACE9FFD"></div>
+                                <div class="tools-edit-image"><a href="javascript:void(0)" data-no="1" class="btn btn-light btn-edit-image">edit</a></div>
+                            </div> -->
+                        </div>
+                    </div>
+                    <div class="container">
+                        <center><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">สร้างโพสต์</button></center>
+                        <div class="modal fade" id="myModal" role="dialog">
+                            <div class="modal-dialog">
+
+                                <!-- Modal content-->
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <p>คุณต้องการสร้างโพสต์นี้ใช่หรือไม่</p>
+                                    </div>
+                                    <div class="mo-footer">
+                                        <input type="hidden" name="donator_id" value="2">
+                                        <button type="submit" class="btn btn-lg" data-toggle="modal" data-target="#myModal2">ยืนยัน</button>
+                                        <button type="button" class="btn btn-lg" data-dismiss="modal">ยกเลิก</button>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+
             </div>
         </form>
+
         <div class="container">
             <p class="text-center">Give Aware</p>
         </div>
@@ -318,74 +344,74 @@
         <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 
         <script>
-                    function openNav() {
-                        document.getElementById("mySidenav").style.width = "250px";
-                        document.getElementById("main").style.marginLeft = "250px";
-                        document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
-                    }
-
-                    function openNavLeft() {
-                        document.getElementById("mySidenav-left").style.width = "250px";
-                        document.getElementById("main").style.marginLeft = "250px";
-                        document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
-                    }
-
-                    function closeNavLeft() {
-                        document.getElementById("mySidenav-left").style.width = "0";
-                        document.getElementById("main").style.marginLeft = "0";
-                        document.body.style.backgroundColor = "white";
-                    }
-
-                    function closeNav() {
-                        document.getElementById("mySidenav").style.width = "0";
-                        document.getElementById("main").style.marginLeft = "0";
-                        document.body.style.backgroundColor = "white";
-                    }
-
-
-                    $(document).ready(function () {
-                        document.getElementById('pro-image').addEventListener('change', readImage, false);
-
-                        $(".preview-images-zone").sortable();
-
-                        $(document).on('click', '.image-cancel', function () {
-                            let no = $(this).data('no');
-                            $(".preview-image.preview-show-" + no).remove();
-                        });
-                    });
-
-                    var num = 4;
-                    function readImage() {
-                        if (window.File && window.FileList && window.FileReader) {
-                            var files = event.target.files; //FileList object
-                            var output = $(".preview-images-zone");
-
-                            for (let i = 0; i < files.length; i++) {
-                                var file = files[i];
-                                if (!file.type.match('image'))
-                                    continue;
-
-                                var picReader = new FileReader();
-
-                                picReader.addEventListener('load', function (event) {
-                                    var picFile = event.target;
-                                    var html = '<div class="preview-image preview-show-' + num + '">' +
-                                            '<div class="image-cancel" data-no="' + num + '">x</div>' +
-                                            '<div class="image-zone"><img id="pro-img-' + num + '" src="' + picFile.result + '"></div>';
-                                    // '<div class="tools-edit-image"><a href="javascript:void(0)" data-no="' + num + '" class="btn btn-light btn-edit-image">edit</a></div>' +
-                                    // '</div>';
-
-                                    output.append(html);
-                                    num = num + 1;
-                                });
-
-                                picReader.readAsDataURL(file);
-                            }
-                            $("#pro-image").val('');
-                        } else {
-                            console.log('Browser not support');
+                        function openNav() {
+                            document.getElementById("mySidenav").style.width = "250px";
+                            document.getElementById("main").style.marginLeft = "250px";
+                            document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
                         }
-                    }
+
+                        function openNavLeft() {
+                            document.getElementById("mySidenav-left").style.width = "250px";
+                            document.getElementById("main").style.marginLeft = "250px";
+                            document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+                        }
+
+                        function closeNavLeft() {
+                            document.getElementById("mySidenav-left").style.width = "0";
+                            document.getElementById("main").style.marginLeft = "0";
+                            document.body.style.backgroundColor = "white";
+                        }
+
+                        function closeNav() {
+                            document.getElementById("mySidenav").style.width = "0";
+                            document.getElementById("main").style.marginLeft = "0";
+                            document.body.style.backgroundColor = "white";
+                        }
+
+
+                        $(document).ready(function () {
+                            document.getElementById('pro-image').addEventListener('change', readImage, false);
+
+                            $(".preview-images-zone").sortable();
+
+                            $(document).on('click', '.image-cancel', function () {
+                                let no = $(this).data('no');
+                                $(".preview-image.preview-show-" + no).remove();
+                            });
+                        });
+
+                        var num = 4;
+                        function readImage() {
+                            if (window.File && window.FileList && window.FileReader) {
+                                var files = event.target.files; //FileList object
+                                var output = $(".preview-images-zone");
+
+                                for (let i = 0; i < files.length; i++) {
+                                    var file = files[i];
+                                    if (!file.type.match('image'))
+                                        continue;
+
+                                    var picReader = new FileReader();
+
+                                    picReader.addEventListener('load', function (event) {
+                                        var picFile = event.target;
+                                        var html = '<div class="preview-image preview-show-' + num + '">' +
+                                                '<div class="image-cancel" data-no="' + num + '">x</div>' +
+                                                '<div class="image-zone"><img id="pro-img-' + num + '" src="' + picFile.result + '"></div>';
+                                        // '<div class="tools-edit-image"><a href="javascript:void(0)" data-no="' + num + '" class="btn btn-light btn-edit-image">edit</a></div>' +
+                                        // '</div>';
+
+                                        output.append(html);
+                                        num = num + 1;
+                                    });
+
+                                    picReader.readAsDataURL(file);
+                                }
+                                $("#pro-image").val('');
+                            } else {
+                                console.log('Browser not support');
+                            }
+                        }
         </script>
     </body>
 </html>
