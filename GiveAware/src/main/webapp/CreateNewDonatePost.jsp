@@ -246,6 +246,8 @@
         </div>
         <!--หัวข้อโพสต์  -->
         <form action="CreateNewDonatePost">
+            <input type="hidden" name="accountId" value="1">
+            <input type="hidden" name="accountRoleId" value="1">
             <div class="container">
                 <div class="form-group">
                     <h4>หัวข้อโพสต์</h4>
@@ -259,25 +261,25 @@
                 </div>
                 <div class="form-group">
                     <h4>จังหวัด</h4>
-                    <select class="form-control">
+                    <select name="province" class="form-control">
                         <%
                             List<Province> pv = Province.getAllProvince();
                             for (Province p : pv) {
                                 request.setAttribute("p", p);
                         %>
-                        <option value="${p.province_id}" name="province">${p.province_name}</option>
+                        <option value="${p.province_id}" >${p.province_name}</option>
                         <%}%>
                     </select>
                 </div>
                 <div class="form-group">
                     <h4>หมวดหมู่</h4>
-                    <select class="form-control">
+                    <select name="category" class="form-control">
                         <%
                             List<Category> cg = Category.getAllCategory();
                             for (Category c : cg) {
                                 request.setAttribute("c", c);
                         %>
-                        <option value="${c.category_id}" name="category">${c.category_name}</option>
+                        <option value="${c.category_id}" >${c.category_name}  ${c.category_id}</option>
                         <%}%>
                     </select>
                 </div>

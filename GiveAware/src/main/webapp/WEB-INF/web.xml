@@ -8,6 +8,10 @@
         <servlet-name>ShowCreateDonatePostServlet</servlet-name>
         <servlet-class>controller.ShowCreateDonatePostServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>CreateNewDonatePostServlet</servlet-name>
+        <servlet-class>controller.CreateNewDonatePostServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>ViewAllDonatePostServlet</servlet-name>
         <url-pattern>/ViewAllDonatePost</url-pattern>
@@ -15,6 +19,10 @@
     <servlet-mapping>
         <servlet-name>ShowCreateDonatePostServlet</servlet-name>
         <url-pattern>/ShowCreateDonatePost</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>CreateNewDonatePostServlet</servlet-name>
+        <url-pattern>/CreateNewDonatePost</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
