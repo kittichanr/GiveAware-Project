@@ -316,16 +316,20 @@
                 %>
                 <div class="container">
                     <div class="row">
-                        <div class="col-xs-12 col-sm-3 box-shadow"  style=" margin-top: 10px;">
-                            <div class="col-xs-4 col-sm-12" style="height:100%; padding:0px;">
-                                <img src="donatepost/${donate.image_list_str}.jpg" class=""  width="100%" height="100%">
+                        <div class="col-xs-12 col-sm-6 box-shadow"  style=" margin-top: 20px;">
+                            <div class="col-xs-4 col-sm-12" style="height:200px; padding:0px;">
+                                <!--<div style="width: 50%; height: 50%; max-width:80%; max-height: 80%;">-->
+                                    <img style="height: 100%; width: 100%; object-fit: cover" src="donatepost/${donate.image_list_str}.jpg" class="">
+                                <!--</div>-->
                             </div>
-                            <div class="col-xs-8 col-sm-12">
+                            <div class="col-xs-8 col-sm-12" style=" margin-top: 10px;">
                                 <h5>${donate.thing_name}</h5>
                                 <h5>${donate.area}</h5>
                                 <h5>${donate.province.province_name}</h5>
                                 <h5>${donate.donator.member_name} ${donate.donator.member_lastname}</h5>
-                                <button type="button" class="btn btn-default btn-xs">กดรับบริจาค</button>
+                                <div style="margin-top: 10px; margin-bottom: 10px">
+                                    <button type="button" class="btn btn-default btn-xs">กดรับบริจาค</button>
+                                </div>
                             </div>
                         </div>
                         <%            }
