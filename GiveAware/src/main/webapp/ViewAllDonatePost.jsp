@@ -3,7 +3,7 @@
     Created on : Feb 17, 2018, 5:00:49 PM
     Author     : pek
 --%>
-
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page import="model.DonatePost"%>
 <%@page import="java.util.List"%>
 <%@page import="utils.ConnectionBuilder"%>
@@ -214,63 +214,7 @@
 
     <body>
 
-        <nav class="navbar navbar-inverse">
-            <div class="container-fluid">
-                <div class="row">
-
-                    <div class="col-xs-4">
-                        <div class="navbar-header" >
-                            <img onclick="openNavLeft()" 
-                                 src="https://i.pinimg.com/736x/8a/37/d2/8a37d23c8349779fad20350bee046b2a--unique-senior-pictures-senior-photos-in-a-field.jpg" 
-                                 class="img-circle img-profile" 
-                                 alt="Cinque Terre" 
-                                 width="40" height="40"> 
-                        </div>
-                    </div>
-
-                    <div class="col-xs-4 text-center" style="text-align: center; color: white;padding: 11px">
-                        <!-- <p class="navbar-text"  width="100%">Give Aware</p> -->
-                        <span>
-                            Give Aware
-                        </span>
-                    </div>
-
-                    <div class="col-xs-4" align="right">
-                        <div>
-                            <span class="img-profile hamburgur-right" style="font-size:30px;cursor:pointer; color: #fff" onclick="openNav()" >&#9776;
-                            </span>
-                        </div>
-                    </div>
-
-
-
-
-                    <div id="mySidenav-left" class="sidenav-left">
-                        <img href="/OldHome.jsp" 
-                             src="https://i.pinimg.com/736x/8a/37/d2/8a37d23c8349779fad20350bee046b2a--unique-senior-pictures-senior-photos-in-a-field.jpg" 
-                             class="img-circle img-profile text-center" 
-                             alt="Cinque Terre" 
-                             width="40" height="40"> 
-                        <a href="javascript:void(0)" class="closebtn left" onclick="closeNavLeft()">&times;</a>
-                        <a href="#">หน้าแรก</a>
-                        <a href="#">โปรไฟล์ของฉัน</a>
-                        <a href="#">แก้ไขข้อมูลส่วนตัว</a>
-                        <a href="#">คำถามที่พบบ่อย</a>
-                        <a href="#">ร้องเรียน</a>
-                        <a href="#">ออกจากระบบ</a>
-                    </div>
-
-                    <div id="mySidenav" class="sidenav">
-                        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-                        <a href="#">About</a>
-                        <a href="#">Services</a>
-                        <a href="#">Clients</a>
-                        <a href="#">Contact</a>
-                    </div>
-                </div>
-            </div>
-        </nav>
-
+        <jsp:include page="/WEB-INF/JSP/Navbar_Home.jsp"/>
         <div class="jumbotron" style="background-color: #FFFFFF; padding-top:0; padding-bottom: 0">
             <img src="https://www.cesarsway.com/sites/newcesarsway/files/styles/large_article_preview/public/Natural-Dog-Law-2-To-dogs%2C-energy-is-everything.jpg?itok=Z-ujUOUr" 
                  class="image-post" style="width: 100%; height: auto;">
