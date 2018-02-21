@@ -15,7 +15,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>Bootstrap Example</title>
+        <title>GiveAware: Donate</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -313,20 +313,19 @@
                     List<DonatePost> DP = DonatePost.getAllDonatePost(iPageNo, iShowRows);
                     for (DonatePost donate : DP) {
                         request.setAttribute("donate", donate);
-
                 %>
                 <div class="container">
                     <div class="row">
                         <div class="col-xs-12 col-sm-3 box-shadow"  style=" margin-top: 10px;">
                             <div class="col-xs-4 col-sm-12" style="height:100%; padding:0px;">
-                                <img src="https://www.cesarsway.com/sites/newcesarsway/files/styles/large_article_preview/public/Natural-Dog-Law-2-To-dogs%2C-energy-is-everything.jpg?itok=Z-ujUOUr" class=""  width="100%" height="100%">
+                                <img src="donatepost/${donate.image_list_str}.jpg" class=""  width="100%" height="100%">
                             </div>
                             <div class="col-xs-8 col-sm-12">
                                 <h5>${donate.thing_name}</h5>
                                 <h5>${donate.area}</h5>
                                 <h5>${donate.province.province_name}</h5>
                                 <h5>${donate.donator.member_name} ${donate.donator.member_lastname}</h5>
-                                <button type="button" class="btn btn-default btn-xs">Medium</button>
+                                <button type="button" class="btn btn-default btn-xs">กดรับบริจาค</button>
                             </div>
                         </div>
                         <%            }
@@ -376,7 +375,7 @@
                     %>
                     <a href="ViewAllDonatePost.jsp?iPageNo=<%=i%>" style="cursor:pointer;color: red"><b><%=i%></b></a>
                             <%
-                            } else if (i <= iTotalPages) {
+                            } else if (i <= iTotalPages-1) {
                             %>
                     <a href="ViewAllDonatePost.jsp?iPageNo=<%=i%>"><%=i%></a>
                     <%
