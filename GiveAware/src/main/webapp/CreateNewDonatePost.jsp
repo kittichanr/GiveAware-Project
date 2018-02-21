@@ -231,15 +231,17 @@
 
         <!-- ---------------------------- Body -------------------------------------->
         <div class="jumbotron" style="background-color: #FFFFFF; padding-top:0; padding-bottom: 0">
-            <center><h1 style="width: 100%; height: auto;"> สร้างโพสต์</h1></center>
+            <center><h2 style="width: 100%; height: auto;"> สร้างโพสต์</h2></center>
         </div>
         <div class="row">
-            <div class="col-xs-6 col-sm-6">
-                <button class="block">ขายของ</button>
-            </div>
-            <div class="col-xs-6 col-sm-6">
-                <button class="block">บริจาคสิ่งของ</button>
-            </div>
+            <center>
+                <div class="col-xs-6 col-sm-6">
+                    <button disabled class="block" style="text-align: center">ขายของ</button>
+                </div>
+                <div class="col-xs-6 col-sm-6">
+                    <button class="block" >บริจาคสิ่งของ</button>
+                </div>
+            </center>
         </div>
         <div>
             <center><h3><u>สร้างโพสต์บริจาคสิ่งของ</u></h3></center>
@@ -279,7 +281,7 @@
                             for (Category c : cg) {
                                 request.setAttribute("c", c);
                         %>
-                        <option value="${c.category_id}" >${c.category_name}  ${c.category_id}</option>
+                        <option value="${c.category_id}" >${c.category_name}</option>
                         <%}%>
                     </select>
                 </div>
